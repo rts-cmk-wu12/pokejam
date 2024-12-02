@@ -1,4 +1,4 @@
-import PrimaryMenu from "../component/primary-menu"
+import PrimaryMenu from "../components/primary-menu"
 
 export default function Forside() {
 	return (
