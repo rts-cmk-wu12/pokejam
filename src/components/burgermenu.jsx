@@ -27,7 +27,7 @@ export default function BurgerMenu({ burgerMenuOpen, setBurgerMenuOpen }) {
 				burgerMenuOpen={burgerMenuOpen}
 				setBurgerMenuOpen={setBurgerMenuOpen}
 			/>
-			<nav>
+			<nav onClick={() => setBurgerMenuOpen(prevState => !prevState)}>
 				<ul>
 					<li><Link to="/" style={style.link}>Forside</Link></li>
 					<li><Link to="/kontakt" style={style.link}>Kontakt</Link></li>

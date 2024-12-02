@@ -5,20 +5,28 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Forside from './views/forside.jsx'
 import Kontakt from './views/kontakt.jsx'
 import Pokemon from './views/pokemon.jsx'
+import Layout from './views/layout.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Forside />
-  },
-  {
-    path: "/kontakt",
-    element: <Kontakt />
-  },
-  {
-    path: "/pokemon/:name",
-    element: <Pokemon />
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Forside />
+      },
+      {
+        path: "/kontakt",
+        element: <Kontakt />
+      },
+      {
+        path: "/pokemon/:name",
+        element: <Pokemon />
+      }
+    ]
   }
+
 ])
 
 createRoot(document.getElementById('root')).render(

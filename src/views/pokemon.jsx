@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import PrimaryMenu from "../components/primary-menu"
 
 export default function Pokemon() {
 	const params = useParams()
@@ -24,7 +23,6 @@ export default function Pokemon() {
 
 	return (
 		<>
-			<PrimaryMenu />
 			<img style={style.img} src={pokemon.sprites?.other["official-artwork"].front_default} alt="" />
 			<h1 style={style.heading}>{pokemon.name}</h1>
 			<p>{pokemon.base_experience}</p>

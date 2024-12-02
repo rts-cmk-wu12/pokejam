@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import PrimaryMenu from "../components/primary-menu"
 import Pokecard from "../components/pokecard"
 
 export default function Forside() {
@@ -13,12 +12,11 @@ export default function Forside() {
 
 	return (
 		<>
-			<PrimaryMenu />
 			<h1>Forside</h1>
 			<ul>
 				{pokemon.results?.map(element => (
-					<li>
-						<Pokecard name={element.name} />
+					<li key={element.url}>
+						<Pokecard name={element.name} url={element.url} />
 					</li>
 				))}
 			</ul>
